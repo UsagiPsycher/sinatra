@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body style="background-color:#17bebb">
+    <h1 style="font-family: Lato Thin ;color:	#fffbff; text-align:center"> B I E N V E N U E ! 
+    </h1>
+    <p style="color:#2e282a">Voici la liste des potins, clique <a href="gossips/new">ici</a> pour créer un potin</p>
+    <p><%i = 1%>
+    <% gossips.each do |gossip| %>
+        <p style="text-align:center">
+        <hr style="color: #2e282a">
+          <%= gossip.author %><br/>
+          <%= gossip.content %><br/>
+          Lien vers le profil du <a href="gossips/<%=i%>">potin </a>  
+        </p>
+        <% i+=1%>
+      <% end %>
+      </p>
+  </body>
+</html>
